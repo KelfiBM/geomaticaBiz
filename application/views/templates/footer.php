@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="footer-content text-center padding-ver-clear">
-                            <div class="logo-footer"><img id="logo-footer" class="center-block" src="../asset/images/logos/logoTrans.png" alt=""></div>
+                            <div class="logo-footer"><img id="logo-footer" class="center-block" src="<?php echo base_url(); ?>asset/images/logos/logoTrans.png" alt=""></div>
                             <p>Geomedición, Instrumentos y Sistemas, S.A. (GIS) es una empresa dominicana, establecida en 1998 con la finalidad de proveer las soluciones geomáticas con tecnologías de punta a los agrimensores e ingenieros geomáticos en toda la Región de el Caribe.</p>
                             <ul class="list-inline mb-20">
                                 <li><i class="text-default fa fa-map-marker pr-5"></i>Wenceslao Alvarez #62 Apt 3b</li>
@@ -16,7 +16,7 @@
                                 <li class="facebook"><a target="_blank" href="https://www.facebook.com/Geomedici%C3%B3n-Instrumentos-y-Sistemas-SRL-256115174424212/"><i class="fa fa-facebook"></i></a></li>
                             </ul>
                             <div class="separator"></div>
-                            <p class="text-center margin-clear">Copyright © 2017 Geomedicion. All Rights Reserved</p>
+                            <p class="text-center margin-clear">Copyright © 2017 Geomedición. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
@@ -25,22 +25,22 @@
     </div>
 </footer>
 </div>
-<script type="text/javascript" src="../asset/plugins/jquery.min.js"></script>
-<script type="text/javascript" src="../asset/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../asset/plugins/modernizr.js"></script>
-<script type="text/javascript" src="../asset/plugins/isotope/isotope.pkgd.min.js"></script>
-<script type="text/javascript" src="../asset/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="../asset/plugins/waypoints/jquery.waypoints.min.js"></script>
-<script src="../asset/plugins/jquery.parallax-1.1.3.js"></script>
-<script src="../asset/plugins/jquery.validate.js"></script>
-<script type="text/javascript" src="../asset/plugins/jquery.browser.js"></script>
-<script type="text/javascript" src="../asset/plugins/SmoothScroll.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/modernizr.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/isotope/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/waypoints/jquery.waypoints.min.js"></script>
+<script src="<?php echo base_url(); ?>asset/plugins/jquery.parallax-1.1.3.js"></script>
+<script src="<?php echo base_url(); ?>asset/plugins/jquery.validate.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/jquery.browser.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/SmoothScroll.js"></script>
 <?php
 foreach ($pluginsJs as $pluginJs) {
-    echo "<script type='text/javascript' src='../asset/plugins/{$pluginJs}' rel='stylesheet'>";
+    echo "<script type='text/javascript' src='".base_url()."asset/{$pluginJs}'></script>";
 }
 ?>
-<script type="text/javascript" src="../asset/js/template.js"></script>
-<script type="text/javascript" src="../asset/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/js/template.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>asset/js/custom.js"></script>
 </body>
 </html>

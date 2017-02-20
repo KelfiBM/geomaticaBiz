@@ -9,7 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title><?php echo $title; ?> - Geomedicion</title>
+    <title><?php echo $title; ?> - Geomedición</title>
     <meta name="description" content="Geomedicion">
     <meta name="author" content="Kelfi Batista">
 
@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../asset/images/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>asset/images/favicon.ico">
 
     <!-- Web Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic'
@@ -27,28 +27,28 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap core CSS -->
-    <link href="../asset/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Font Awesome CSS -->
-    <link href="../asset/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <!-- Fontello CSS -->
-    <link href="../asset/fonts/fontello/css/fontello.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/fonts/fontello/css/fontello.css" rel="stylesheet">
 
     <!-- Plugins -->
-    <link href="../asset/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
     <?php
     foreach ($pluginsCss as $pluginCss) {
-        echo "<link href='../asset/plugins/{$pluginCss}' rel='stylesheet'>";
+        echo "<link href='".base_url()."asset/{$pluginCss}' rel='stylesheet'>";
     }
     ?>
-    <link href="../asset/css/animations.css" rel="stylesheet">
-    <link href="../asset/plugins/hover/hover-min.css" rel="stylesheet">
-    <link href="../asset/css/style.css" rel="stylesheet">
-    <link href="../asset/css/typography-default.css" rel="stylesheet">
-    <link href="../asset/css/skins/blue.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/css/animations.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/plugins/hover/hover-min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/css/typography-default.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/css/skins/blue.css" rel="stylesheet">
     <!-- Custom css -->
-    <link href="../asset/css/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset/css/custom.css" rel="stylesheet">
 </head>
 <body class="no-trans boxed pattern-3 page-loader-3">
 <div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
@@ -152,13 +152,13 @@
 
                             <!-- logo -->
                             <div id="logo" class="logo">
-                                <a href="<?php echo base_url('home/index'); ?>"><img id="logo_img"
-                                                                                     src="../asset/images/logos/logoTrans.png"
-                                                                                     alt="GIS"></a>
+                                <a href="<?php echo base_url('home/index'); ?>">
+                                    <img id="logo_img" src="<?php echo base_url(); ?>asset/images/logos/logoTrans.png" alt="GIS" style="max-height: 50px">
+                                </a>
                             </div>
                             <!-- name-and-slogan -->
                             <div class="site-slogan">
-                                Geomedicion, Instrumentos y Sistemas, SRL
+                                Geomedición, Instrumentos y Sistemas, SRL
                             </div>
                         </div>
                     </div>
@@ -234,7 +234,7 @@
                                                     <a href="<?php echo base_url("home/contact") ?>">Contactenos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="<?php echo base_url("home/about") ?>">Sobre Geomedicion</a>
+                                                    <a href="<?php echo base_url("home/about") ?>">Sobre Geomedición</a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo base_url("home/team") ?>">Nuestro Equipo</a>
