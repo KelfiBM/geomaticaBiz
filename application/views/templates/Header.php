@@ -179,10 +179,10 @@
                                         </div>
                                         <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                             <ul class="nav navbar-nav ">
-                                                <li class="active">
-                                                    <a href="<?php echo base_url("home/index") ?>">Home</a>
+                                                <li class="<?php if($this->uri->segment(1)=="index"){echo 'active';}?>">
+                                                    <a href="<?php echo base_url("index") ?>">Inicio</a>
                                                 </li>
-                                                <li class="dropdown  mega-menu">
+                                                <li class="dropdown  mega-menu <?php if($this->uri->segment(1)=="home/index"){echo 'active';}?>">
                                                     <a href="#" class="dropdown-toggle"
                                                        data-toggle="dropdown">Productos</a>
                                                     <ul class="dropdown-menu">
@@ -230,14 +230,14 @@
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li>
-                                                    <a href="<?php echo base_url("home/contact") ?>">Contactenos</a>
+                                                <li class="<?php if($this->uri->segment(1)=="contact"){echo 'active';}?>">
+                                                    <a href="<?php echo base_url("contact") ?>">Contactenos</a>
                                                 </li>
-                                                <li>
-                                                    <a href="<?php echo base_url("home/about") ?>">Sobre Geomedición</a>
+                                                <li class="<?php if($this->uri->segment(1)=="about"){echo 'active';}?>">
+                                                    <a href="<?php echo base_url("about") ?>">Sobre Geomedición</a>
                                                 </li>
-                                                <li>
-                                                    <a href="<?php echo base_url("home/team") ?>">Nuestro Equipo</a>
+                                                <li class="<?php if($this->uri->segment(1)=="team"){echo 'active';}?>">
+                                                    <a href="<?php echo base_url("team") ?>">Nuestro Equipo</a>
                                                 </li>
                                             </ul>
                                             <div class="header-dropdown-buttons hidden-xs ">
