@@ -25,22 +25,93 @@
     </div>
 </footer>
 </div>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/modernizr.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/isotope/isotope.pkgd.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/waypoints/jquery.waypoints.min.js"></script>
-<script src="<?php echo base_url(); ?>asset/plugins/jquery.parallax-1.1.3.js"></script>
-<script src="<?php echo base_url(); ?>asset/plugins/jquery.validate.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/jquery.browser.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/plugins/SmoothScroll.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/bootstrap/"); ?>js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>modernizr.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>isotope/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>waypoints/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>jquery.validate.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>jquery.browser.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>SmoothScroll.js"></script>
+<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>bootstrap-notify/bootstrap-notify.min.js"></script>
 <?php
-foreach ($pluginsJs as $pluginJs) {
-    echo "<script type='text/javascript' src='".base_url()."asset/{$pluginJs}'></script>";
+if(isset($pluginsJs)){
+    foreach ($pluginsJs as $pluginJs) {
+        echo "<script type='text/javascript' src='".base_url()."asset/{$pluginJs}'></script>";
+    }
+}
+if(isset($pluginsJsCustom)){
+    foreach ($pluginsJsCustom as $pluginJsCustom) {
+        echo "<script type='text/javascript' src='{$pluginJsCustom}'></script>";
+    }
 }
 ?>
 <script type="text/javascript" src="<?php echo base_url(); ?>asset/js/template.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>asset/js/custom.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        $("#loginForm").validate({
+            rules: {
+                password: {
+                    required: true,
+                },
+                user:{
+                    required: true
+                },
+            },
+            messages:{
+                password:{
+                    required: "Inserte su contraseña"
+                },
+                user: "Inserte su nombre de usuario o correo"
+            },
+            submitHandler: login
+        });
+
+        function login(){
+            var loginData = $('#loginForm').serialize();
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo base_url('administration/login_user')?>',
+                data: loginData,
+                dataType: 'json',
+                success: function(response){
+                    if(response.success){
+                        window.location.replace("<?php echo base_url('administration')?>");
+                    }
+                    else{
+                        $.notify({
+                            // options
+                            message: 'El usuario y/o contraseña son erróneos'
+                        },{
+                            // settings
+                            type: 'danger',
+                            delay: 5000,
+                            offset : {
+                                y: 100,
+                                x: 20
+                            }
+                        });
+                    }
+                },
+                error: function(response, status, error){
+                    console.log(response.success);
+                    console.log(response.responseText);
+                    console.log(response);
+                    console.log(error);
+                    alert(JSON.stringify(error));
+                }
+
+            });
+        }
+        return false;
+    });
+
+</script>
+
 </body>
 </html>

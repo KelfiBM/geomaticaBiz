@@ -2,7 +2,7 @@
     <div class="breadcrumb-container">
         <div class="container">
             <ol class="breadcrumb">
-                <li><i class="fa fa-home pr-10"></i><a class="link-dark" href="<?php echo base_url('home/index'); ?>">Home</a></li>
+                <li><i class="fa fa-home pr-10"></i><a class="link-dark" href="<?php echo base_url('home'); ?>">Inicio</a></li>
                 <li class="active">Sobre Geomedición</li>
             </ol>
         </div>
@@ -334,6 +334,17 @@
             <div class="col-md-6">
                 <div class="owl-carousel content-slider">
                     <div class="testimonial text-center padding-ver-clear">
+                        <h3>Me Encanta!</h3>
+                        <div class="separator"></div>
+                        <div class="testimonial-body">
+                            <blockquote>
+                                <p>Sin lugar a dudas es el mas confiable centro de referencia y consulta en estos momentos!</p>
+                            </blockquote>
+                            <div class="testimonial-info-1">- Adolfo Jimenez</div>
+                            <div class="testimonial-info-2">By Agrimensor</div>
+                        </div>
+                    </div>
+                    <div class="testimonial text-center padding-ver-clear">
                         <h3>5 Estrellas!</h3>
                         <div class="separator"></div>
                         <div class="testimonial-body">
@@ -383,31 +394,31 @@
                 <div class="clients-container">
                     <div class="clients">
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">
-                            <a href="http://www.trimble.com/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-1.png" alt=""></a>
+                            <a href="http://www.trimble.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-1.png" alt=""></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="200">
-                            <a href="http://tdsway.com/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-2.png" alt=""></a>
+                            <a href="http://tdsway.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-2.png" alt=""></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="300">
-                            <a href="http://www.southinstrument.com/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-3.png" alt=""></a>
+                            <a href="http://www.southinstrument.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-3.png" alt=""></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="400">
-                            <a href="http://www.spectraprecision.com/eng/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-4.png" alt=""></a>
+                            <a href="http://www.spectraprecision.com/eng/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-4.png" alt=""></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="500">
-                            <a href="http://www.nikon.com/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-5.png" alt=""></a>
+                            <a href="http://www.nikon.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-5.png" alt=""></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="600">
-                            <a href="https://www.surveying.com/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-6.png" alt=""></a>
+                            <a href="https://www.surveying.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-6.png" alt=""></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="700">
-                            <a href="https://www.oceanwise.eu/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-7.png" alt=""></a>
+                            <a href="https://www.oceanwise.eu/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-7.png" alt=""></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="800">
-                            <a href="http://www.valeport.co.uk/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-8.png" alt=""></a>
+                            <a href="http://www.valeport.co.uk/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-8.png" alt=""></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="900">
-                            <a href="http://www.chrisnik.com/"><img src="<?php echo base_url(); ?>asset/images/page-about/client-9.png" alt=""></a>
+                            <a href="http://www.chrisnik.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-9.png" alt=""></a>
                         </div>
                     </div>
                 </div>

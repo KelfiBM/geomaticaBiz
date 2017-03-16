@@ -1298,7 +1298,7 @@
 					$('.submit-button').button("loading");
 					$.ajax({
 						type: "POST",
-						url: "php/email-sender.php",
+						url: "http://localhost/geomaticaBiz/asset/php/email-sender.php",
 						data: {
 							"name": $("#contact-form #name").val(),
 							"email": $("#contact-form #email").val(),
@@ -1345,19 +1345,19 @@
 				},
 				messages: {
 					name: {
-						required: "Please specify your name",
-						minlength: "Your name must be longer than 2 characters"
+                        required: "Por favor, especifica tu nombre",
+                        minlength: "Tu nombre debe tener mínimo 2 caracteres"
 					},
 					email: {
-						required: "We need your email address to contact you",
-						email: "Please enter a valid email address e.g. name@domain.com"
+                        required: "Necesitamos tu correo para contactarte",
+                        email: "Inserta un correo valido e.j. nombre@dominio.com"
 					},
 					subject: {
-						required: "Please enter a subject"
+                        required: "Inserta un Asunto"
 					},
 					message: {
-						required: "Please enter a message",
-						minlength: "Your message must be longer than 10 characters"
+                        required: "Inserta un Mensaje",
+                        minlength: "Tu mensaje debe tener mínimo 10 caracteres"
 					}
 				},
 				errorElement: "span",
@@ -1378,7 +1378,7 @@
 					$('.submit-button').button("loading");
 					$.ajax({
 						type: "POST",
-						url: "php/email-sender-recaptcha.php",
+						url: "http://geomatica.biz/asset/php/email-sender-recaptcha.php",
 						data: {
 							"name": $("#contact-form-with-recaptcha #name").val(),
 							"email": $("#contact-form-with-recaptcha #email").val(),
@@ -1391,7 +1391,7 @@
 							if (data.sent == "yes") {
 								$("#MessageSent").removeClass("hidden");
 								$("#MessageNotSent").addClass("hidden");
-								$(".submit-button").removeClass("btn-default").addClass("btn-success").prop('value', 'Message Sent');
+								$(".submit-button").removeClass("btn-default").addClass("btn-success").prop('value', 'Mensaje Enviado');
 								$("#contact-form-with-recaptcha .form-control").each(function() {
 									$(this).prop('value', '').parent().removeClass("has-success").removeClass("has-error");
 								});
@@ -1426,19 +1426,19 @@
 				},
 				messages: {
 					name: {
-						required: "Please specify your name",
-						minlength: "Your name must be longer than 2 characters"
+						required: "Por favor, especifica tu nombre",
+						minlength: "Tu nombre debe tener mínimo 2 caracteres"
 					},
 					email: {
-						required: "We need your email address to contact you",
-						email: "Please enter a valid email address e.g. name@domain.com"
+						required: "Necesitamos tu correo para contactarte",
+						email: "Inserta un correo valido e.j. nombre@dominio.com"
 					},
 					subject: {
-						required: "Please enter a subject"
+						required: "Inserta un Asunto"
 					},
 					message: {
-						required: "Please enter a message",
-						minlength: "Your message must be longer than 10 characters"
+						required: "Inserta un Mensaje",
+						minlength: "Tu mensaje debe tener mínimo 10 caracteres"
 					}
 				},
 				errorElement: "span",
@@ -1792,11 +1792,11 @@
 			$(".btn-alert").on('click', function(event) {
 				$.notify({
 					// options
-					message: 'Great! you have just created this message :-) you can configure this into the template.js file'
+					message: 'El usuario y/o contraseña son erróneos'
 				},{
 					// settings
-					type: 'info',
-					delay: 4000,
+					type: 'danger',
+					delay: 5000,
 					offset : {
 						y: 100,
 						x: 20
