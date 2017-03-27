@@ -7,10 +7,14 @@ class Administration extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->library('session');
         $this->load->model('adminModel');
+        $this->load->model('productos_Model');
+        $this->load->helper('form');
     }
 
     public function login_user() {
-
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            show_404();
+        }
         $this->form_validation->set_rules('user', 'Usuario o Email', 'trim|required');
         $this->form_validation->set_rules('pass', 'Contraseña', 'trim|required');
         if ($this->form_validation->run() == FALSE) {
@@ -41,10 +45,25 @@ class Administration extends CI_Controller {
     }
 
     public function index(){
-        redirect("/");
+        if(!isset($this->session->userdata['loggedIn'])){
+            show_404();
+        }
+        $data['title'] =  "Administración";
+        $data['marcas'] = array(
+            '' => 'Seleccione una Marca',
+            '1' => 'Objeto 1'
+        );
+        $data['categorias'] = array(
+            '' => 'Seleccione una Categoria',
+            '1' => 'Objeto 1'
+        );
+        $this->load->template('administration/index',$data);
     }
 
     public function logout() {
+        if(!isset($this->session->userdata['loggedIn'])){
+            show_404();
+        }
         $sess_array = array(
             'username' => ''
         );

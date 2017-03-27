@@ -25,17 +25,17 @@
     </div>
 </footer>
 </div>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/bootstrap/"); ?>js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>modernizr.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>isotope/isotope.pkgd.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>magnific-popup/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>waypoints/jquery.waypoints.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>jquery.parallax-1.1.3.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>jquery.validate.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>jquery.browser.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>SmoothScroll.js"></script>
-<script type="text/javascript" src="<?php echo base_url("asset/plugins/"); ?>bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="<?php echo base_url(); ?>asset/plugins/jquery.min.js"></script>
+<script src="<?php echo base_url(); ?>asset/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>asset/plugins/modernizr.js"></script>
+<script src="<?php echo base_url(); ?>asset/plugins/isotope/isotope.pkgd.min.js"></script>
+<script src="<?php echo base_url(); ?>asset/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="<?php echo base_url(""); ?>asset/plugins/waypoints/jquery.waypoints.min.js"></script>
+<script src="<?php echo base_url(""); ?>asset/plugins/jquery.parallax-1.1.3.js"></script>
+<script src="<?php echo base_url(""); ?>asset/plugins/jquery.validate.js"></script>
+<script src="<?php echo base_url(""); ?>asset/plugins/jquery.browser.js"></script>
+<script src="<?php echo base_url(""); ?>asset/plugins/SmoothScroll.js"></script>
+<script src="<?php echo base_url(""); ?>asset/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
 <?php
 if(isset($pluginsJs)){
     foreach ($pluginsJs as $pluginJs) {
@@ -48,9 +48,17 @@ if(isset($pluginsJsCustom)){
     }
 }
 ?>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/js/template.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>asset/js/custom.js"></script>
+<script src="<?php echo base_url("asset/plugins/"); ?>pace/pace.min.js"></script>
+<script src="<?php echo base_url("asset/js/"); ?>template.js"></script>
+<script src="<?php echo base_url("asset/js/"); ?>custom.js"></script>
 
+
+<?php if($this->uri->segment(1)=="administration"){ ?>
+
+
+<?php } ?>
+
+<?php if(!isset($this->session->userdata['loggedIn'])){ ?>
 <script>
     $(document).ready(function(){
 
@@ -98,20 +106,12 @@ if(isset($pluginsJsCustom)){
                         });
                     }
                 },
-                error: function(response, status, error){
-                    console.log(response.success);
-                    console.log(response.responseText);
-                    console.log(response);
-                    console.log(error);
-                    alert(JSON.stringify(error));
-                }
-
             });
         }
         return false;
     });
 
 </script>
-
+<?php } ?>
 </body>
 </html>

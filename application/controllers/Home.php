@@ -23,7 +23,6 @@ class Home extends CI_Controller {
             "plugins/rs-plugin-5/css/navigation.css",
             "plugins/morphext/morphext.css");
         $data['pluginsJs'] = array("plugins/owlcarousel2/owl.carousel.min.js",
-            "plugins/pace/pace.min.js",
             "plugins/vide/jquery.vide.js",
             "plugins/morphext/morphext.min.js",
             "plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js?rev=5.0",

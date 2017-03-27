@@ -1,9 +1,14 @@
-/* Theme Name: The Project - Responsive Website Template
-Author:HtmlCoder
-Author URI:http://www.htmlcoder.me
-Author e-mail:htmlcoder.me@gmail.com
-Version:1.4.0
-Created:December 2014
-License URI:http://support.wrapbootstrap.com/
-File Description: Place here your custom CSS styles
-*/
+:focus:required:invalid, :focus:invalid, :optional:invalid {
+    /* insert your own styles for invalid form input */
+    -moz-box-shadow: none;
+    border-color: #a94442;
+}
+:valid {
+    border-color: #3c763d;
+}
+:optional{
+    border-color: #e1e1e1;
+}
+button:valid{
+    border: none;
+}
