@@ -1,21 +1,4 @@
-<div class="banner border-clear light-translucent-bg" style="background-image:url('<?php echo base_url(); ?>asset/images/page-about/page-about-banner-2.jpg');">
-    <div class="breadcrumb-container">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li><i class="fa fa-home pr-10"></i><a class="link-dark" href="<?php echo base_url('home'); ?>">Inicio</a></li>
-                <li class="active">Administración</li>
-            </ol>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 pv-20">
-                <h2 class="title"><strong>Administración:</strong> Administra el contenido de tu pagina web</h2>
-
-            </div>
-        </div>
-    </div>
-</div>
+<?php $this->load->view('templates/breadcrumb');?>
 <section class="main-container">
     <div class="container">
         <div class="row">
@@ -27,12 +10,12 @@
                         <li class="active">
                             <a href="#vtab1" role="tab" data-toggle="tab"><i class="fa fa-plus pr-10"></i>Añadir Producto</a>
                         </li>
-                        <li><a href="#vtab2" role="tab" data-toggle="tab"><i class="fa fa-pencil pr-10"></i>Editar Productos</a></li>
+                        <li><a href="#vtab2" role="tab" data-toggle="tab"><i class="fa fa-pencil pr-10"></i>Eliminar Productos</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="vtab1">
                             <h3 class="title">Añadir Producto</h3>
-                            <form id="productForm" enctype="multipart/form-data" class="form-horizontal" role="form" action="<?php echo base_url('product/insert_producto')?>">
+                            <form id="productForm" enctype="multipart/form-data" class="form-horizontal" role="form" action="<?php echo base_url('products/insert_producto')?>" method="post">
                                 <div class="form-group">
                                     <label for="productfName" class="col-sm-2 control-label">Nombre</label>
                                     <div class="col-sm-10">
@@ -84,7 +67,7 @@
                                 <div class="form-group">
                                     <label for="productfImagenes" class="col-sm-2 control-label">Imágenes</label>
                                     <div class="col-sm-10">
-                                        <input type="file" id="productfImagenes" class="form-control-file" multiple accept="image/*" required>
+                                        <input type="file" id="productfImagenes" class="form-control-file" multiple accept=".gif,.jpg,.jpeg,.png" required name="fotos[]">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -93,6 +76,10 @@
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                        <div class="tab-pane" id="vtab2">
+                            <h3 class="title">Eliminar Producto</h3>
+
                         </div>
                     </div>
                 </div>

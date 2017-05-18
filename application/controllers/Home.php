@@ -37,6 +37,9 @@ class Home extends CI_Controller {
         $data['title'] =  "Sobre Nosotros";
         $data['pluginsCss'] = array("plugins/owlcarousel2/assets/owl.carousel.min.css", "plugins/owlcarousel2/assets/owl.theme.default.min.css");
         $data['pluginsJs'] = array("plugins/owlcarousel2/owl.carousel.min.js");
+        $data['breadTitleStrong'] = "Bienvenidos ";
+        $data['breadTitle'] = "A Geomedición, Instrumentos y Sistemas, S.A. (GIS)";
+        $data['breadDescription'] = "Geomedición, Instrumentos y Sistemas, S.A. (GIS)  les da la más cordial bienvenida a su portal geomático!";
     	$this->load->template('home/about',$data);
     }
     public function team(){

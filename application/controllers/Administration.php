@@ -7,7 +7,9 @@ class Administration extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->library('session');
         $this->load->model('adminModel');
-        $this->load->model('productos_Model');
+        $this->load->model('productosModel');
+        $this->load->model('categoriasModel');
+        $this->load->model('marcasModel');
         $this->load->helper('form');
     }
 
@@ -48,15 +50,23 @@ class Administration extends CI_Controller {
         if(!isset($this->session->userdata['loggedIn'])){
             show_404();
         }
+        $marcas = array();
+        $categorias = array();
+        foreach ($this->marcasModel->getAll() as $marca){
+            $marcas[$marca["Id"]] = $marca["Descripcion"];
+        }
+        foreach ($this->categoriasModel->getAll() as $categoria){
+            $categorias[$categoria["Id"]] = $categoria["Descripcion"];
+        }
         $data['title'] =  "Administración";
         $data['marcas'] = array(
             '' => 'Seleccione una Marca',
-            '1' => 'Objeto 1'
-        );
+        ) + $marcas;
         $data['categorias'] = array(
             '' => 'Seleccione una Categoria',
-            '1' => 'Objeto 1'
-        );
+        ) + $categorias;
+        $data['breadTitleStrong'] = "Administración: ";
+        $data['breadTitle'] = "Administra el contenido de tu pagina web";
         $this->load->template('administration/index',$data);
     }
 

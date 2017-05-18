@@ -1,4 +1,5 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 Class AdminModel extends CI_Model {
 
     public function registration_insert($data) {

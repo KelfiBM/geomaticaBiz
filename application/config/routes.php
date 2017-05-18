@@ -54,9 +54,16 @@ $route['404'] = 'my404';
 $route['404_override'] = 'my404';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['About'] = 'home/about';
 $route['about'] = 'home/about';
-$route['team'] = 'home/team';
+$route['Team'] = 'home/team';
+$route['Contact'] = 'home/contact';
 $route['contact'] = 'home/contact';
+$route['contacto'] = 'home/contact';
+$route['Contacto'] = 'home/contact';
+$route['Home'] = 'home/index';
 $route['home'] = 'home/index';
 $route['sendcontact'] = 'home/sendContact';
+$route['Index'] = 'home/index';
 $route['index'] = 'home/index';
+$route['categoria/(:num)'] = "products/categorie/$1";
