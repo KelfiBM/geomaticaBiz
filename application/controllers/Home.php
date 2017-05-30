@@ -9,7 +9,8 @@ class Home extends CI_Controller {
             $this->load->helper('form');
             $this->load->library('form_validation');
             $this->load->library('session');
-            /*$this->load->model('login_database');*/
+            $this->load->model('productosModel');
+            $this->load->model('categoriasModel');
         }
     }
 
@@ -30,6 +31,13 @@ class Home extends CI_Controller {
             "plugins/rs-plugin-5/js/extensions/revolution.extension.slideanims.min.js",
             "plugins/rs-plugin-5/js/extensions/revolution.extension.layeranimation.min.js",
             "plugins/rs-plugin-5/js/extensions/revolution.extension.navigation.min.js");
+        $productos = $this->productosModel->getAll(8);
+        $categoriasSeleccionadas = array();
+        foreach($productos as $producto){
+            $categoriasSeleccionadas[] = $producto['Categoria'];
+        }
+        $data['pRecientesCategories'] = array_unique($categoriasSeleccionadas);
+        $data['pRecientes'] = $productos;
         $this->load->template('home/index',$data);
     }
 

@@ -42,4 +42,39 @@ Class ProductosModel extends CI_Model {
         }
         return $result;
     }
+    public function getAll($max = 0, $desc = true){
+        if($max > 0){
+            $this->db->limit($max);
+        }
+        $this->db->select('productos.*, categoria.Descripcion as Categoria, marca.Descripcion as Marca');
+        $this->db->from('productos');
+        $this->db->join('categoria', 'productos.IdCategoria = categoria.Id');
+        $this->db->join('marca','productos.IdMarca = marca.Id');
+        if($desc){
+            $this->db->order_by('Id',"desc");
+        }
+        else{
+            $this->db->order_by('Id',"asc");
+        }
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            $productos = $query->result_array();
+            for($i = 0; $i < count($productos); $i++){
+
+                $this->db->select('imagePath');
+                $this->db->from('productosImages');
+                $this->db->where('idProductos',$productos[$i]['Id']);
+                $query = $this->db->get();
+                if($query->num_rows() > 0){
+                    $images = $query->result_array();
+                    foreach($images as $image){
+                        $productos[$i]['Images'][] = $image['imagePath'];
+                    }
+                }
+            }
+            return $productos;
+        } else {
+            return array();
+        }
+    }
 }

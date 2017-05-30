@@ -67,3 +67,6 @@ $route['sendcontact'] = 'home/sendContact';
 $route['Index'] = 'home/index';
 $route['index'] = 'home/index';
 $route['categoria/(:num)'] = "products/categorie/$1";
+$route['categorie/(:num)'] = "products/categorie/$1";
+$route['producto/(:num)'] = "products/producto/$1";
+$route['product/(:num)'] = "products/producto/$1";

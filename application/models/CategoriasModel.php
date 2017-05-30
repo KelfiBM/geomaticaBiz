@@ -5,7 +5,7 @@ Class CategoriasModel extends CI_Model {
         $this->db->select('*');
         $this->db->from('categoria');
         $query = $this->db->get();
-        if ($query->num_rows() == 1) {
+        if ($query->num_rows() > 0) {
             return $query->result_array();
         } else {
             return array();
