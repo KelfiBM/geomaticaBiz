@@ -42,7 +42,7 @@ Class ProductosModel extends CI_Model {
         }
         return $result;
     }
-    public function getAll($max = 0, $desc = true){
+    public function getAll($max = 0, $orderBy = 0, $categ = 0){
         if($max > 0){
             $this->db->limit($max);
         }
@@ -50,11 +50,18 @@ Class ProductosModel extends CI_Model {
         $this->db->from('productos');
         $this->db->join('categoria', 'productos.IdCategoria = categoria.Id');
         $this->db->join('marca','productos.IdMarca = marca.Id');
-        if($desc){
-            $this->db->order_by('Id',"desc");
+        switch ($orderBy){
+            case 1:
+                $this->db->order_by('productos.Id',"asc");
+                break;
+            case 2:
+                $this->db->order_by('productos.Id','RANDOM');
+                break;
+            default:
+                $this->db->order_by('productos.Id',"desc");
         }
-        else{
-            $this->db->order_by('Id',"asc");
+        if($categ != 0){
+            $this->db->where('productos.IdCategoria',$categ);
         }
         $query = $this->db->get();
         if ($query->num_rows() > 0) {
@@ -76,5 +83,32 @@ Class ProductosModel extends CI_Model {
         } else {
             return array();
         }
+    }
+    public function get($id = 0){
+        if($id == 0){
+            return array();
+        }
+        $this->db->select('productos.*, categoria.Descripcion as Categoria, marca.Descripcion as Marca');
+        $this->db->from('productos');
+        $this->db->join('categoria', 'productos.IdCategoria = categoria.Id');
+        $this->db->join('marca','productos.IdMarca = marca.Id');
+        $this->db->where('productos.Id',$id);
+        $query = $this->db->get();
+        if($query->num_rows() > 0){
+            $producto = $query->row_array();
+            $producto['Images'] = array();
+            $this->db->select('imagePath');
+            $this->db->from('productosImages');
+            $this->db->where('idProductos',$producto['Id']);
+            $query = $this->db->get();
+            if($query->num_rows() > 0){
+                $images = $query->result_array();
+                foreach($images as $image){
+                    $producto['Images'][] = $image['imagePath'];
+                }
+            }
+            return $producto;
+        }
+        return array();
     }
 }

@@ -1,8 +1,8 @@
-<?php $this->load->view('templates/breadcrumb');?>
+<?php /*$this->load->view('templates/breadcrumb');*/?>
     <section class="main-container">
         <div class="container">
             <div class="row">
-                <div class="main col-md-12">
+                <div class="main col-md-8">
                     <ul class="nav nav-pills" role="tablist">
                         <li class="active"><a href="#pill-1" role="tab" data-toggle="tab" title="video"><i class="fa fa-camera pr-5"></i> Imágenes</a></li>
                     </ul>
@@ -10,7 +10,7 @@
                         <div class="tab-pane active" id="pill-1">
                             <div class="shadow bordered">
                                 <div class="overlay-container">
-                                    <img src="<?php echo base_url('asset/images/products/').$producto['Images'][0];?>" alt="">
+                                    <img src="<?php echo base_url('asset/images/products/').$producto['Images'][0];?>" style="display: inline" alt="">
                                     <a href="<?php echo base_url('asset/images/products/').$producto['Images'][0];?>" class="overlay-link popup-img" title="<?php echo $producto['Nombre']?>">
                                         <i class="fa fa-plus"></i>
                                     </a>

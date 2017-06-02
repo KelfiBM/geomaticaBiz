@@ -9,9 +9,9 @@ class Home extends CI_Controller {
             $this->load->helper('form');
             $this->load->library('form_validation');
             $this->load->library('session');
-            $this->load->model('productosModel');
-            $this->load->model('categoriasModel');
         }
+        $this->load->model('productosModel');
+        $this->load->model('categoriasModel');
     }
 
     public function index()

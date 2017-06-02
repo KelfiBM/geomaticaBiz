@@ -92,8 +92,23 @@ class Products extends CI_Controller
         }
     }
 
-    public function producto($id){
+    public function producto($id = 0){
+        if($id == 0){
+            redirect("/");
+            return;
+        }
+        $data['producto'] = $this->productosModel->get($id);
+        if(empty($data['producto'])){
+            redirect("/");
+            return;
+        }
+        $data['pRelacionados'] = $this->productosModel->getAll(4,2,$data['producto']['IdCategoria']);
 
+        $data['title'] =  $data['producto']['Nombre'];
+        $data['pluginsCss'] = array("plugins/owlcarousel2/assets/owl.carousel.min.css",
+            "plugins/owlcarousel2/assets/owl.theme.default.min.css");
+        $data['pluginsJs'] = array("plugins/owlcarousel2/owl.carousel.min.js");
+        $this->load->template('products/singleProduct',$data);
     }
 
     public function categorie($id){
