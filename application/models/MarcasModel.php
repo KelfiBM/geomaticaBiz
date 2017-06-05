@@ -11,4 +11,14 @@ Class MarcasModel extends CI_Model {
             return array();
         }
     }
+    public function exist_id($id){
+        $this->db->where('Id',$id);
+        $query = $this->db->get('marca');
+        if ($query->num_rows() > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

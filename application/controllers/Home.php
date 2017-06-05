@@ -31,7 +31,7 @@ class Home extends CI_Controller {
             "plugins/rs-plugin-5/js/extensions/revolution.extension.slideanims.min.js",
             "plugins/rs-plugin-5/js/extensions/revolution.extension.layeranimation.min.js",
             "plugins/rs-plugin-5/js/extensions/revolution.extension.navigation.min.js");
-        $productos = $this->productosModel->getAll(8);
+        $productos = $this->productosModel->getAll(4);
         $categoriasSeleccionadas = array();
         foreach($productos as $producto){
             $categoriasSeleccionadas[] = $producto['Categoria'];
@@ -51,7 +51,7 @@ class Home extends CI_Controller {
     	$this->load->template('home/about',$data);
     }
     public function team(){
-        redirect("/");
+        show_404();
     }
     public function contact(){
         $data['title'] =  "Contacto";

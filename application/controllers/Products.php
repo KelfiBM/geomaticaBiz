@@ -99,26 +99,48 @@ class Products extends CI_Controller
         }
         $data['producto'] = $this->productosModel->get($id);
         if(empty($data['producto'])){
-            redirect("/");
+            show_404();
             return;
         }
-        $data['pRelacionados'] = $this->productosModel->getAll(4,2,$data['producto']['IdCategoria']);
-
         $data['title'] =  $data['producto']['Nombre'];
         $data['pluginsCss'] = array("plugins/owlcarousel2/assets/owl.carousel.min.css",
             "plugins/owlcarousel2/assets/owl.theme.default.min.css");
         $data['pluginsJs'] = array("plugins/owlcarousel2/owl.carousel.min.js");
+
+        $data['pRelacionados'] = $this->productosModel->getAll(4,2,$data['producto']['IdCategoria']);
+        $data['selectedCategorie'] = $data['producto']['IdCategoria'];
+        $data['selectedMarca'] = $data['producto']['IdMarca'];
         $this->load->template('products/singleProduct',$data);
     }
 
-    public function categorie($id){
+    public function categorie($id = 0){
 
+        $data['pluginsCss'] = array("plugins/owlcarousel2/assets/owl.carousel.min.css",
+            "plugins/owlcarousel2/assets/owl.theme.default.min.css");
+        $data['pluginsJs'] = array("plugins/owlcarousel2/owl.carousel.min.js");
+        $data['title'] =  "Categorias";
+        if($id != 0 && !$this->categoriasModel->exist_id($id)) $id = 0;
+        $data['selectedCategorie'] = $id;
+        $data['productos'] = $this->productosModel->getAll();
+        $data['categories'] = $this->categoriasModel->getAll();
+        $this->load->template('products/portfolio',$data);
+    }
+
+    public function marca($id = 0){
+        $data['pluginsCss'] = array("plugins/owlcarousel2/assets/owl.carousel.min.css",
+            "plugins/owlcarousel2/assets/owl.theme.default.min.css");
+        $data['pluginsJs'] = array("plugins/owlcarousel2/owl.carousel.min.js");
+        $data['title'] =  "Marcas";
+        if($id != 0 && !$this->marcasModel->exist_id($id)) $id = 0;
+        $data['selectedMarca'] = $id;
+        $data['productos'] = $this->productosModel->getAll();
+        $data['marcas'] = $this->marcasModel->getAll();
+        $this->load->template('products/portfolioMarca',$data);
     }
 
     private function set_upload_options(){
         $config = array();
         $config['upload_path']            = APPPATH."../asset/images/products/";
-        var_dump($config);
         $config['allowed_types']          = 'gif|jpg|jpeg|png';
         $config['max_filename_increment'] = 1000;
         $config['max_size']      = '0';

@@ -55,24 +55,24 @@
                                                 <li class="dropdown <?php if(strtolower($this->uri->segment(1))=="producto"){echo 'active';}?>">
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos</a>
                                                     <ul class="dropdown-menu">
-                                                        <li class="dropdown">
-                                                            <a  class="dropdown-toggle <?php echo (strtolower($this->uri->segment(2))=="categoria" ? "active" : "")?>" data-toggle="dropdown" href="#">Por Categoria</a>
+                                                        <li class="dropdown <?php echo (strtolower($this->uri->segment(2))=="categoria" ? "active" : "")?>">
+                                                            <a  class="dropdown-toggle" data-toggle="dropdown" href="#">Por Categoria</a>
                                                             <ul class="dropdown-menu">
-                                                                <?php echo "<li><a href='".base_url('categoria/0')."'>Todos</a></li>";
+                                                                <?php echo "<li".($selectedCategorie == 0? " class='active'" : "")."><a href='".base_url('producto/categoria/0')."'>Todos</a></li>";
                                                                 if(isset($categoriesHead)){
                                                                     foreach ($categoriesHead as $categoria){
-                                                                        echo "<li><a href='".base_url('categoria/'.$categoria['Id'])."'>".$categoria['Descripcion']."</a></li>";
+                                                                        echo "<li".($selectedCategorie == $categoria['Id'] ? " class='active'" : "")."><a href='".base_url('producto/categoria/'.$categoria['Id'])."'>".$categoria['Descripcion']."</a></li>";
                                                                     }
                                                                 } ?>
                                                             </ul>
                                                         </li>
-                                                        <li class="dropdown">
-                                                            <a  class="dropdown-toggle <?php echo (strtolower($this->uri->segment(2))=="marca" ? "active" : "")?>" data-toggle="dropdown" href="#">Por Marca</a>
+                                                        <li class="dropdown <?php echo (strtolower($this->uri->segment(2))=="marca" ? "active" : "")?>">
+                                                            <a  class="dropdown-toggle " data-toggle="dropdown" href="#">Por Marca</a>
                                                             <ul class="dropdown-menu">
-                                                                <?php echo "<li><a href='".base_url('marca/0')."'>Todos</a></li>";
+                                                                <?php echo "<li".($selectedMarca == 0 ? " class='active'" : "")."><a href='".base_url('producto/marca/0')."'>Todos</a></li>";
                                                                 if(isset($marcasHead)){
                                                                     foreach ($marcasHead as $marca){
-                                                                        echo "<li><a href='".base_url('marca/'.$marca['Id'])."'>".$marca['Descripcion']."</a></li>";
+                                                                        echo "<li".($selectedMarca == $marca['Id'] ? " class='active'" : "")."><a href='".base_url('producto/marca/'.$marca['Id'])."'>".$marca['Descripcion']."</a></li>";
                                                                     }
                                                                 } ?>
                                                             </ul>

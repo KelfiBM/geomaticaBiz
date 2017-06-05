@@ -6,9 +6,10 @@ class MY_Loader extends CI_Loader{
 	    $CI =& get_instance();
         $CI->load->model('categoriasModel');
         $CI->load->model('marcasModel');
-
         $vars['categoriesHead'] = $CI->categoriasModel->getAll();
         $vars['marcasHead'] = $CI->marcasModel->getAll();
+        if(!isset($vars['selectedCategorie'])) $vars['selectedCategorie'] = -1;
+        if(!isset($vars['selectedMarca'])) $vars['selectedMarca'] = -1;
 	    if($return):
 		$content  = $this->view('templates/header', $vars, $return);
         $content .= $this->view($templateName, $vars, $return);
