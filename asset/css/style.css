@@ -23,6 +23,9 @@
  */
 /* 1 Elements
 ----------------------------------------------------------------------------- */
+.morphext> .animated {
+  display: inline-block;
+}
 body.canvas-sliding,
 body.canvas-slid {
   overflow-x: hidden;

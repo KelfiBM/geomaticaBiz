@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="footer-content text-center padding-ver-clear">
-                            <div class="logo-footer"><img id="logo-footer" class="center-block" src="<?php echo base_url('asset/'); ?>images/logos/logoTrans.png" alt=""></div>
+                            <div class="logo-footer"><img id="logo-footer" class="center-block" src="http://static.geomatica.biz/asset/images/logos/logoTrans.png" alt="" height="97" width="248"></div>
                             <p>Geomedición, Instrumentos y Sistemas, S.A. (GIS) es una empresa dominicana, establecida en 1998 con la finalidad de proveer las soluciones geomáticas con tecnologías de punta a los agrimensores e ingenieros geomáticos en toda la Región de el Caribe.</p>
                             <ul class="list-inline mb-20">
                                 <li><i class="text-default fa fa-map-marker pr-5"></i>Wenceslao Alvarez #62 Apt 3b</li>

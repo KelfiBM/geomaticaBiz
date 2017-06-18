@@ -29,7 +29,7 @@
                                 </div>
                             </div>-->
                             <div id="logo" class="logo">
-                                <a href="<?php echo base_url(); ?>"><img id="logo_img" src="<?php echo base_url('asset'); ?>/images/logos/logoTrans.png" alt="GIS" style="max-height: 50px"></a>
+                                <a href="<?php echo base_url(); ?>"><img id="logo_img" src="http://static.geomatica.biz/asset/images/logos/logoTrans.png" alt="GIS" height="50" width="128"></a>
                             </div>
                             <div class="site-slogan">
                                 Geomedición, Instrumentos y Sistemas, SRL

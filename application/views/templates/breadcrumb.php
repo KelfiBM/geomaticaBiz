@@ -6,7 +6,7 @@
                 <?php
                 if($this->uri->total_segments() > 1){
                 for($i = 1; $i < $this->uri->total_segments() - 1; $i++){
-                    echo "<li><a href='".base_url();
+                    echo "<li><a href='http://static.geomatica.biz/asset";
                     for ($j = 1; $j < $i; $j++){
                         echo "/".$this->uri->segment($j);
                     }

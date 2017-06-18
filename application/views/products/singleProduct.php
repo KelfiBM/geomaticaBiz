@@ -10,8 +10,8 @@
                         <div class="tab-pane active" id="pill-1">
                             <div class="shadow bordered">
                                 <div class="overlay-container">
-                                    <img src="<?php echo base_url('asset/images/products/').$producto['Images'][0];?>" style="display: inline" alt="">
-                                    <a href="<?php echo base_url('asset/images/products/').$producto['Images'][0];?>" class="overlay-link popup-img" title="<?php echo $producto['Nombre']?>">
+                                    <img src="<?php echo "http://static.geomatica.biz/asset/images/products/".$producto['Images'][0];?>" style="display: inline" alt="">
+                                    <a href="<?php echo "http://static.geomatica.biz/asset/images/products/".$producto['Images'][0];?>" class="overlay-link popup-img" title="<?php echo $producto['Nombre']?>">
                                         <i class="fa fa-plus"></i>
                                     </a>
                                 </div>
@@ -21,8 +21,8 @@
                                 <?php for ($i = 1; $i < count($producto['Images']); $i++){?>
                                     <div class="col-xs-3">
                                         <div class="overlay-container">
-                                            <img src="<?php echo base_url('asset/images/products/').$producto['Images'][$i];?>" alt="">
-                                            <a href="<?php echo base_url('asset/images/products/').$producto['Images'][$i];?>" class="overlay-link small popup-img" title="<?php echo $producto['Nombre']?>">
+                                            <img src="<?php echo "http://static.geomatica.biz/asset/images/products/".$producto['Images'][$i];?>" alt="">
+                                            <a href="<?php echo "http://static.geomatica.biz/asset/images/products/".$producto['Images'][$i];?>" class="overlay-link small popup-img" title="<?php echo $producto['Nombre']?>">
                                                 <i class="fa fa-plus"></i>
                                             </a>
                                         </div>
@@ -69,7 +69,7 @@
                     <div class="col-md-3 col-sm-6">
                     <div class="image-box shadow bordered text-center mb-20">
                         <div class="overlay-container">
-                            <img src="<?php echo base_url('asset/images/products/').$pRelacionado['Images'][0] ?>" alt="">
+                            <img src="<?php echo "http://static.geomatica.biz/asset/images/products/".$pRelacionado['Images'][0] ?>" alt="">
                             <div class="overlay-top">
                                 <div class="text">
                                     <h3><a href="<?php echo base_url("producto/".$pRelacionado['Id']) ?>"><?php echo $pRelacionado['Nombre']?></a></h3>

@@ -34,7 +34,7 @@
                                     <div class="carousel-inner" role="listbox">
                                         <div class="item active">
                                             <div class="overlay-container">
-                                                <img src="<?php echo base_url("asset/images/products/".$producto['Images'][0]); ?>" alt="">
+                                                <img src="<?php echo "http://static.geomatica.biz/asset/images/products/".$producto['Images'][0]; ?>" alt="">
                                                 <div class="overlay-to-top">
                                                     <p class="small margin-clear"><em><?php echo $producto['Categoria'] ?> <br> <?php echo $producto['Marca'] ?></em></p>
                                                 </div>
@@ -43,7 +43,7 @@
                                         <?php for($i = 1; $i < count($producto['Images']); $i++) { ?>
                                         <div class="item">
                                             <div class="overlay-container">
-                                                <img src="<?php echo base_url("asset/images/products/".$producto['Images'][$i]); ?>" alt="">
+                                                <img src="<?php echo "http://static.geomatica.biz/asset/images/products/".$producto['Images'][$i]; ?>" alt="">
                                                 <div class="overlay-to-top">
                                                     <p class="small margin-clear"><em><?php echo $producto['Categoria'] ?> <br> <?php echo $producto['Marca'] ?></em></p>
                                                 </div>

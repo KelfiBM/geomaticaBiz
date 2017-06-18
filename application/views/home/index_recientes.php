@@ -29,8 +29,7 @@
                                     <div class="item active">
                                         <div class="image-box shadow bordered text-center mb-20">
                                             <div class="overlay-container">
-                                                <img src="<?php echo base_url("asset/images/products/".$pReciente['Images'][0]); ?>"
-                                                     alt="">
+                                                <img src="<?php echo "http://static.geomatica.biz/asset/images/products/".$pReciente['Images'][0]; ?>" alt="" height="180">
                                                 <div class="overlay-top">
                                                     <div class="text">
                                                         <h3><a href="<?php echo base_url("producto/".$pReciente['Id']) ?>"><?php echo $pReciente['Nombre']?></a></h3>
@@ -46,8 +45,7 @@
                                         <div class="item">
                                             <div class="image-box shadow bordered text-center mb-20">
                                                 <div class="overlay-container">
-                                                    <img src="<?php echo base_url("asset/images/products/".$pReciente['Images'][$i]); ?>"
-                                                         alt="">
+                                                    <img src="<?php echo "http://static.geomatica.biz/asset/images/products/".$pReciente['Images'][$i]; ?>" alt="" height="180">
                                                     <div class="overlay-top">
                                                         <div class="text">
                                                             <h3><a href="<?php echo base_url("producto/".$pReciente['Id']) ?>"><?php echo $pReciente['Nombre']?></a></h3>

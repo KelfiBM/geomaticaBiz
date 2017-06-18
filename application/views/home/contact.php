@@ -1,10 +1,10 @@
 <div class="banner dark-translucent-bg"
-     style="background-image:url('<?php echo base_url(); ?>asset/images/page-contact/background-img-3.jpg'); background-position: 50% 30%;">
+     style="background: url('http://static.geomatica.biz/asset/images/page-contact/background-img-3.jpg') 50% 30%;">
     <div class="breadcrumb-container">
         <div class="container">
             <ol class="breadcrumb">
                 <li><i class="fa fa-home pr-10"></i><a class="link-dark"
-                                                       href="<?php echo base_url('home'); ?>">Inicio</a></li>
+                                                       href="<?php echo base_url(); ?>">Inicio</a></li>
                 <li class="active">Contacto</li>
             </ol>
         </div>
@@ -70,7 +70,6 @@
                                               placeholder=""></textarea>
                                     <i class="fa fa-pencil form-control-feedback"></i>
                                 </div>
-                                <script src='https://www.google.com/recaptcha/api.js'></script>
                                 <div class="g-recaptcha" data-sitekey="6LdgmhYUAAAAAI-LaPxipMItTlLCznJAsfXlDlOm"></div>
                                 <input type="submit" value="Submit" class="submit-button btn btn-default">
                             </form>

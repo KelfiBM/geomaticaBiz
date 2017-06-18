@@ -1,4 +1,4 @@
-<div class="banner border-clear light-translucent-bg" style="background-image:url('<?php echo base_url(); ?>asset/images/page-about/page-about-banner-2.jpg');">
+<div class="banner border-clear light-translucent-bg" style="background-image:url('http://static.geomatica.biz/asset/images/page-about/page-about-banner-2.jpg');">
     <div class="breadcrumb-container">
         <div class="container">
             <ol class="breadcrumb">

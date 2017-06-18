@@ -21,13 +21,12 @@ class Home extends CI_Controller {
             "plugins/owlcarousel2/assets/owl.theme.default.min.css",
             "plugins/rs-plugin-5/css/settings.css",
             "plugins/rs-plugin-5/css/layers.css",
-            "plugins/rs-plugin-5/css/navigation.css",
-            "plugins/morphext/morphext.css");
+            "plugins/rs-plugin-5/css/navigation.css");
         $data['pluginsJs'] = array("plugins/owlcarousel2/owl.carousel.min.js",
-            "plugins/vide/jquery.vide.js",
+            "plugins/vide/jquery.vide.min.js",
             "plugins/morphext/morphext.min.js",
-            "plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js?rev=5.0",
-            "plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js?rev=5.0",
+            "plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js",
+            "plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js",
             "plugins/rs-plugin-5/js/extensions/revolution.extension.slideanims.min.js",
             "plugins/rs-plugin-5/js/extensions/revolution.extension.layeranimation.min.js",
             "plugins/rs-plugin-5/js/extensions/revolution.extension.navigation.min.js");
@@ -57,7 +56,7 @@ class Home extends CI_Controller {
         $data['title'] =  "Contacto";
         $data['pluginsCss'] = array();
         $data['pluginsJs'] = array("js/google.map.config.js");
-        $data['pluginsJsCustom'] = array("https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyDQlrIqrCSr2XCvjlK3HW2D6E96Hicmql8");
+        $data['pluginsJsCustom'] = array("https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyDQlrIqrCSr2XCvjlK3HW2D6E96Hicmql8","https://www.google.com/recaptcha/api.js");
         $this->load->template('home/contact',$data);
     }
     public function error404(){

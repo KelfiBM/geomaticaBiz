@@ -18,7 +18,7 @@
                     <aside class="sidebar col-md-6">
                         <div class="block clearfix">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <img class="img-responsive" src="<?php echo base_url(); ?>asset/images/page-about/equipoGeomedicion.png" alt="">
+                                <img class="img-responsive" src="http://static.geomatica.biz/asset/images/page-about/equipoGeomedicion.jpg" alt="" height="283" width="455">
                             </div>
                         </div>
                     </aside>
@@ -198,7 +198,7 @@
                                 </div>
                                 <div id="collapse12-2" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        Fabricante de productos para la señalización en topografia y construcciones. Pinturas fluorescente, cintas reflexivas y metalicas.
+                                        Fabricante de productos para la señalización en topografía y construcciones. Pinturas fluorescente, cintas reflexivas y metalicas.
                                     </div>
                                 </div>
                             </div>
@@ -251,14 +251,14 @@
         </div>
     </div>
 </section>
-<section class="pv-30 clearfix">
+<!--<section class="pv-30 clearfix">
     <div class="container">
         <h3>Nuestros <strong>Lideres</strong></h3>
         <div class="row">
             <div class="col-sm-4">
                 <div class="image-box team-member shadow mb-20">
                     <div class="overlay-container">
-                        <img src="<?php echo base_url(); ?>asset/images/team-member-1.jpg" alt="">
+                        <img src="http://static.geomatica.biz/asset/images/team-member-1.jpg" alt="">
                         <div class="overlay-to-top">
                             <div class="text">
                                 <h3 class="title">Jane Doe - <span class="small">CTO</span></h3>
@@ -275,7 +275,7 @@
             <div class="col-sm-4">
                 <div class="image-box team-member shadow mb-20">
                     <div class="overlay-container">
-                        <img src="<?php echo base_url(); ?>asset/images/team-member-2.jpg" alt="">
+                        <img src="http://static.geomatica.biz/asset/images/team-member-2.jpg" alt="">
                         <div class="overlay-to-top">
                             <div class="text">
                                 <h3 class="title">John Doe - <span class="small">Manager</span></h3>
@@ -292,7 +292,7 @@
             <div class="col-sm-4">
                 <div class="image-box team-member shadow mb-20">
                     <div class="overlay-container">
-                        <img src="<?php echo base_url(); ?>asset/images/team-member-3.jpg" alt="">
+                        <img src="http://static.geomatica.biz/asset/images/team-member-3.jpg" alt="">
                         <div class="overlay-to-top">
                             <div class="text">
                                 <h3 class="title">Margaret Crayz - <span class="small">Developer</span></h3>
@@ -308,9 +308,7 @@
             </div>
         </div>
     </div>
-</section>
-<!-- section end -->
-
+</section>-->
 <section class="pv-30 light-gray-bg clearfix">
     <div class="container">
         <div class="row">
@@ -377,31 +375,31 @@
                 <div class="clients-container">
                     <div class="clients">
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">
-                            <a href="http://www.trimble.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-1.png" alt=""></a>
+                            <a href="http://www.trimble.com/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-1.png" alt="" width="80" height="80"></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="200">
-                            <a href="http://tdsway.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-2.png" alt=""></a>
+                            <a href="http://tdsway.com/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-2.png" alt="" width="80" height="80"></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="300">
-                            <a href="http://www.southinstrument.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-3.png" alt=""></a>
+                            <a href="http://www.southinstrument.com/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-3.png" alt="" width="80" height="80"></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="400">
-                            <a href="http://www.spectraprecision.com/eng/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-4.png" alt=""></a>
+                            <a href="http://www.spectraprecision.com/eng/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-4.png" alt="" width="80" height="80"></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="500">
-                            <a href="http://www.nikon.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-5.png" alt=""></a>
+                            <a href="http://www.nikon.com/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-5.png" alt="" width="80" height="80"></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="600">
-                            <a href="https://www.surveying.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-6.png" alt=""></a>
+                            <a href="https://www.surveying.com/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-6.png" alt="" width="80" height="80"></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="700">
-                            <a href="https://www.oceanwise.eu/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-7.png" alt=""></a>
+                            <a href="https://www.oceanwise.eu/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-7.png" alt="" width="80" height="80"></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="800">
-                            <a href="http://www.valeport.co.uk/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-8.png" alt=""></a>
+                            <a href="http://www.valeport.co.uk/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-8.png" alt="" width="80" height="80"></a>
                         </div>
                         <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="900">
-                            <a href="http://www.chrisnik.com/" target="_blank"><img src="<?php echo base_url("asset/images/shared/"); ?>client-9.png" alt=""></a>
+                            <a href="http://www.chrisnik.com/" target="_blank"><img src="http://static.geomatica.biz/asset/images/shared/client-9.png" alt="" width="80" height="80"></a>
                         </div>
                     </div>
                 </div>
